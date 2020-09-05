@@ -62,5 +62,5 @@ if __name__ == "__main__":
             f"{MQTT_PATH}/current/{sensor_address}",
             round(get_average(current_values[sensor_address]), 2),
         )
-    client1.publish(f"{MQTT_PATH}/c", round(temp_avg, 2))
-    client1.publish(f"{MQTT_PATH}/f", round(c_to_f(temp_avg), 2))
+    client1.publish(f"{MQTT_PATH}/temperature/c", round(temp_avg, 2))
+    client1.publish(f"{MQTT_PATH}/temperature/f", round(c_to_f(temp_avg), 2))
