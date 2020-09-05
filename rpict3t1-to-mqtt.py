@@ -59,7 +59,7 @@ if __name__ == "__main__":
     for i in range(3):
         sensor_address = i + 1
         client1.publish(
-            f"{MQTT_PATH}/{sensor_address}",
+            f"{MQTT_PATH}/current/{sensor_address}",
             round(get_average(current_values[sensor_address]), 2),
         )
     client1.publish(f"{MQTT_PATH}/c", round(temp_avg, 2))
